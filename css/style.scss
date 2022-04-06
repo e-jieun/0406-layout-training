@@ -1,0 +1,135 @@
+// common
+*{
+  margin: 0;
+  padding: 0;
+}
+//variable
+$color-bk: black;
+$color-c4: #c4c4c4;
+$color-dp: #8068AD;
+$color-pp: #C8B5C8;
+$color-yel: #EDEBB2;
+$color-cr: #FFFEF9;
+$border-bk: 1px solid black;
+$border-red: 1px solid red;
+$per100: 100%;
+//class-set
+@mixin flex-align-justify($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+@mixin border($px, $color) {
+  border: $px solid $color;
+}
+//style
+#root{
+  width: 100vw;
+  height: 100vh;
+  #con{
+    width: inherit;
+    height: inherit;
+    color: gray;
+    @include flex-align-justify(flex-end, center);
+    >div{
+      width: inherit;
+      height: 60%;
+      background-color: $color-c4;
+      border-radius: 30px 30px 0px 0px;
+      @include flex-align-justify(center, center);
+      flex-direction: column;
+      >div{
+        width: 90%;
+        height: 0%;
+      }
+      >div:nth-child(1){
+        flex-grow: 1;
+        // @include border(1px, #000);
+        @include flex-align-justify(flex-start, center);
+        flex-direction: column;
+        row-gap: 1vh;
+        >div:nth-child(1){
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        >div:nth-child(2){
+          width: 20%;
+          @include flex-align-justify(center, space-between);
+            >div{
+              width: 10px;
+              height: 10px;
+              background-color: #fff;
+              border-radius: 100%;
+          }
+          >div:nth-child(1){
+            background-color: gray;
+          }
+        }
+      }
+      >div:nth-child(2){
+        flex-grow: 1.5;
+        // @include border(1px, #000);
+        @include flex-align-justify(center, center);
+        flex-direction: column;
+        row-gap: 3vh;
+        // id
+        >div{ 
+          >div:nth-child(1){
+            font-size: 0.8rem;
+            position: relative;
+            left: 10px;
+          }
+          >div{
+            >input{
+              width: 90vw;
+              height: 2rem;
+              border: none;
+              border-radius: 5px;
+              font-size: 0.5rem;
+              // Q1. input 태그 안의 폰트 위치는 어떤 속성으로 조정하는지 궁금합니다!
+            }
+          }
+        }
+        >div:nth-child(3){
+          width: 75vw;
+          @include flex-align-justify(center, flex-end);
+          position: relative;
+          top: -2vh;
+          >div{
+            font-size: 0.5rem;
+          }
+        }
+      }
+      >div:nth-child(3){
+        flex-grow: 1;
+        // @include border(1px, #000);
+        @include flex-align-justify(flex-end, flex-start);
+        flex-direction: column;
+        >div:nth-child(1){
+          width: 50%;
+          height: 2rem;
+          background-color: #fff;
+          border-radius: 30px;
+          @include flex-align-justify(center, center);
+        }
+        >div:nth-child(2){
+          width: 35%;
+          text-align: center;
+          font-size: 0.5rem;
+        }
+      }
+      >div:nth-child(4){
+        flex-grow: 0.5;
+        @include flex-align-justify(flex-end, center);
+        >div{
+          width: 50%;
+          height: 0.5rem;
+          background-color: gray;
+          border-radius: 10px;
+          position: absolute;
+          bottom: 1vh;
+        }
+      }
+    }
+  }
+}
