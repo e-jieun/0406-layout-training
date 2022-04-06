@@ -29,7 +29,7 @@
 #root #con > div:nth-child(1) {
   width: inherit;
   height: inherit;
-  background-color: salmon;
+  background-color: #8068AD;
   position: absolute;
 }
 
@@ -53,12 +53,24 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid black;
+  position: relative;
+  bottom: 10vh;
 }
 
 #root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
   width: 50%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  right: 10%;
 }
 
 #root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div {
@@ -66,10 +78,81 @@
   height: 20vw;
   background-color: #fff;
   border-radius: 30px;
+  position: relative;
+  bottom: 7vh;
 }
 
 #root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) {
   width: 50%;
-  height: inherit;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  font-size: 2rem;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1vw;
+          column-gap: 1vw;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div {
+  width: 1vw;
+  height: 1vw;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  background-color: gray;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3vh;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  width: 90vw;
+  height: 0.5rem;
+  background-color: #fff;
+}
+
+#root #con > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
+  width: 90vw;
 }
 /*# sourceMappingURL=style.css.map */

@@ -34,7 +34,7 @@ $per100: 100%;
     >div:nth-child(1){
       width: inherit;
       height: inherit;
-      background-color: salmon;
+      background-color: $color-dp;
       position: absolute;
     }
     >div:nth-child(2){
@@ -48,30 +48,62 @@ $per100: 100%;
         width: inherit;
         height: 50%;
         @include flex-align-justify(center, center);
-        @include border(1px, black);
+        // @include border(1px, black);
+        position: relative;
+        bottom: 10vh;
         >div:nth-child(1){
           width: 50%;
           height: $per100;
+          // @include border(1px, black);
+          @include flex-align-justify(center, flex-end);
+          position: relative;
+          right: 10%;
           >div{
             width: 20vw;
             height: 20vw;
             background-color: #fff;
             border-radius: 30px;
+            position: relative;
+            bottom: 7vh;
           }  
         }
         >div:nth-child(2){
           width: 50%;
-          height: inherit;
+          height: $per100;
+          // @include border(1px, black);
+          @include flex-align-justify(flex-start, space-around);
+          flex-direction: column;
           >div:nth-child(1){
-            
+            font-size: 2rem;
           }
           >div:nth-child(2){
-
+            width: $per100;
+            @include flex-align-justify(center, center);
+            column-gap: 1vw;
+            >div{
+              width: 1vw;
+              height: 1vw;
+              background-color: #fff;
+              border-radius: 100%;
+            }
+            >div:nth-child(1){
+              background-color: gray;
+            }
           }
         }
       }
       >div:nth-child(2){
-
+        @include flex-align-justify(center, center);
+        flex-direction: column;
+        row-gap: 3vh;
+        >div:nth-child(1){
+          width: 90vw;
+          height: 0.5rem;
+          background-color: #fff;
+        }
+        >div:nth-child(2){
+          width: 90vw;
+        }
       }
     }
   }
